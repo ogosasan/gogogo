@@ -14,8 +14,8 @@ func main() {
 	for i := 0; i < n; i++ {
 		arr[i] = make([]string, n)
 	}
+	reader := bufio.NewReader(os.Stdin)
 	for i := 0; i < n; i++ {
-		reader := bufio.NewReader(os.Stdin)
 		text, _ := reader.ReadString('\n')
 		text = strings.TrimSpace(text)
 		var a []string
@@ -35,4 +35,5 @@ func main() {
 		}
 	}
 	fmt.Println("yes")
+
 }
